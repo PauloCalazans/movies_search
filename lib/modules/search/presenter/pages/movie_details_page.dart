@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:movies_search/modules/search/domain/entities/movie.dart';
-import 'package:movies_search/modules/search/domain/entities/movie_detail.dart';
 import 'package:movies_search/modules/search/presenter/states/find_state.dart';
 import 'package:movies_search/modules/search/presenter/states/search_state.dart';
 import 'package:movies_search/modules/search/presenter/stores/find_store.dart';
@@ -33,8 +32,7 @@ class MovieDetailsPageState extends ModularState<MovieDetailsPage, FindStore> {
           return <Widget> [
             SliverAppBar(
               elevation: 2.0,
-              titleSpacing: 0,
-              expandedHeight: MediaQuery.of(context).size.height * .5,
+              expandedHeight: MediaQuery.of(context).size.height * .65,
               pinned: true,
               flexibleSpace: Stack(
                 fit: StackFit.expand,

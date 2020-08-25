@@ -46,7 +46,7 @@ abstract class _SearchStoreBase with Store {
   }
 
   makeMorePages() async {
-    setState(LoadingState());
+//    setState(LoadingState());
     var result = await searchByTitle(titleSearch, page);
     result.fold((l) {
           setState(SuccessStateListMovies(listMovies));

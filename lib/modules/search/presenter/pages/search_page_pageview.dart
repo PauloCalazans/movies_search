@@ -52,6 +52,7 @@ class _SearchPagePageViewState extends ModularState<SearchPagePageView, SearchSt
                   hintText: "Buscar"
               ),
               onChanged: (value) {
+                controller.setCurrentIndex(1);
                 controller.setPage(1);
                 controller.setTitleSearch(value);
               },
@@ -92,14 +93,14 @@ class _SearchPagePageViewState extends ModularState<SearchPagePageView, SearchSt
                     return Stack(
                       children: <Widget>[
                         PageView.builder(
-                            key: _pageStorageKey,
                             controller: _pageController,
                             scrollDirection: Axis.horizontal,
                             allowImplicitScrolling: true,
                             itemCount: list.length,
                             onPageChanged: (index) {
-                              controller.setCurrentIndex(index+1);
-                              if(index + 1 == controller.listMovies.length) {
+                              var position = index + 1;
+                              controller.setCurrentIndex(position);
+                              if(position == controller.listMovies.length) {
                                 _findMorePages();
                               }
                             },
