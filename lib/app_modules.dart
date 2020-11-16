@@ -24,9 +24,9 @@ class AppModules extends MainModule {
   ];
 
   @override
-  List<Router> get routers => [
-    Router('/', child: (_,__) => SearchPagePageView()),
-    Router('/details', child: (_, args) => MovieDetailsPage(vo: args.data['vo'],)),
+  List<ModularRouter> get routers => [
+    ModularRouter('/', child: (_,__) => SearchPagePageView()),
+    ModularRouter('/details', child: (_, args) => MovieDetailsPage(vo: args.data['vo'],)),
   ];
 
   @override
